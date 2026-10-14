@@ -1,0 +1,193 @@
+{
+  "sources": {
+    "earth": {
+      "title": "Earth Element Magic Spell",
+      "author": "qubodup",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "page": "https://opengameart.org/content/earth-element-magic-spell"
+    },
+    "rock": {
+      "title": "rock_breaking",
+      "author": "Blender Foundation",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "page": "https://opengameart.org/content/rockbreaking"
+    },
+    "water": {
+      "title": "Water Splash (Yo Frankie!)",
+      "author": "Blender Foundation (submitted by Lamoot)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "page": "https://opengameart.org/content/water-splash-yo-frankie"
+    },
+    "wind": {
+      "title": "Short wind sound",
+      "author": "remaxim",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "page": "https://opengameart.org/content/short-wind-sound"
+    },
+    "fire": {
+      "title": "Torch Fire Spell / Waving Torch",
+      "author": "spookymodem",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "page": "https://opengameart.org/content/torch-fire-spell"
+    },
+    "magic": {
+      "title": "8 Magic Attacks / 18_Thunder_02.wav",
+      "author": "leohpaz",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "page": "https://opengameart.org/content/8-magic-attacks"
+    }
+  },
+  "assets": [
+    {
+      "file": "earth-cast.wav",
+      "sourceIds": [
+        "earth"
+      ],
+      "duration": 0.72,
+      "peak": 0.86,
+      "rms": 0.2053,
+      "sha256": "88f74df32d755ae9bba159fd9726a217b28c6d60de4a7f34aae0860c45914607",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "earth-impact.wav",
+      "sourceIds": [
+        "rock",
+        "earth"
+      ],
+      "duration": 1.05,
+      "peak": 0.86,
+      "rms": 0.2886,
+      "sha256": "b5fb890c64476086163838e9ef03930cb6acf3b626b5878439aac0120ae977da",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "earth-impact-2.wav",
+      "sourceIds": [
+        "rock"
+      ],
+      "duration": 0.9,
+      "peak": 0.86,
+      "rms": 0.2725,
+      "sha256": "2243fff257e1e7b474f82e88a83fb5876b7c83bf99860b281b6e4af7283e25dc",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "wind-cast.wav",
+      "sourceIds": [
+        "wind"
+      ],
+      "duration": 0.34,
+      "peak": 0.6362,
+      "rms": 0.1601,
+      "sha256": "de0bcd7226c25ad8bcfcc3414c102ad10f795298e4bb442dcb78672c486c8ea4",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "wind-impact.wav",
+      "sourceIds": [
+        "wind"
+      ],
+      "duration": 0.25,
+      "peak": 0.6976,
+      "rms": 0.1764,
+      "sha256": "4a441cc0818e51f19c93def5cbb02fbd8d2d9075d63f8750954594a9366c3c2c",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "fire-cast.wav",
+      "sourceIds": [
+        "fire"
+      ],
+      "duration": 0.7,
+      "peak": 0.86,
+      "rms": 0.1163,
+      "sha256": "0f3b5e220635a4645717b38a0de97b81c6f93ff23ce2a88463937c25dfe40340",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "fire-impact.wav",
+      "sourceIds": [
+        "fire",
+        "rock"
+      ],
+      "duration": 1.1,
+      "peak": 0.86,
+      "rms": 0.2701,
+      "sha256": "0878f0b7b06a839d1e57063c5defc7d000380cdedeba8b90afc505acc864d16f",
+      "changes": "Excerpted, trimmed, filtered where noted, gain-normalized, faded and converted to mono 44.1 kHz PCM WAV. Mixed sources are listed."
+    },
+    {
+      "file": "water-yofrankie-cast.wav",
+      "sourceIds": [
+        "water"
+      ],
+      "duration": 0.26,
+      "peak": 0.82,
+      "rms": 0.0824,
+      "sha256": "61e53343845424d3d3543eb7c009ad7a6f9ed00e2c61f7932cc375fea2b5ceb3",
+      "changes": "Excerpted for cast/impact/chain timing, gain-normalized, lightly faded and converted to mono 44.1 kHz PCM WAV. No other source audio is mixed in."
+    },
+    {
+      "file": "water-yofrankie-impact.wav",
+      "sourceIds": [
+        "water"
+      ],
+      "duration": 1.4,
+      "peak": 0.82,
+      "rms": 0.0913,
+      "sha256": "1c58653697fa3db649f1f46353e74b46d46a366b9e2cced8600bb6764901dd2b",
+      "changes": "Excerpted for cast/impact/chain timing, gain-normalized, lightly faded and converted to mono 44.1 kHz PCM WAV. No other source audio is mixed in."
+    },
+    {
+      "file": "water-yofrankie-impact-2.wav",
+      "sourceIds": [
+        "water"
+      ],
+      "duration": 1.3,
+      "peak": 0.82,
+      "rms": 0.076,
+      "sha256": "d6a6fce04a31bf40578e3cc628165ef2c7fa375081ec99f02af662a945c32c22",
+      "changes": "Excerpted for cast/impact/chain timing, gain-normalized, lightly faded and converted to mono 44.1 kHz PCM WAV. No other source audio is mixed in."
+    },
+    {
+      "file": "lightning-magic-cast.wav",
+      "sourceIds": [
+        "magic"
+      ],
+      "duration": 0.16,
+      "peak": 0.82,
+      "rms": 0.2145,
+      "sha256": "b18f0cbe14e3b540c11747ac8d025fff351035813b128d94568aa711a52b36a1",
+      "changes": "Excerpted for cast/impact/chain timing, gain-normalized, lightly faded and converted to mono 44.1 kHz PCM WAV. No other source audio is mixed in."
+    },
+    {
+      "file": "lightning-magic-impact.wav",
+      "sourceIds": [
+        "magic"
+      ],
+      "duration": 2.3,
+      "peak": 0.82,
+      "rms": 0.1289,
+      "sha256": "c34daadae2666d516a551fd14acc1383d64087b13f9100710caa8abac3b21f3a",
+      "changes": "Excerpted for cast/impact/chain timing, gain-normalized, lightly faded and converted to mono 44.1 kHz PCM WAV. No other source audio is mixed in."
+    },
+    {
+      "file": "lightning-magic-chain.wav",
+      "sourceIds": [
+        "magic"
+      ],
+      "duration": 0.38,
+      "peak": 0.82,
+      "rms": 0.1895,
+      "sha256": "adeeb2e06fc271ccfb0c9172f264cb34bd50169e8caf2007e1619a1338b31e4c",
+      "changes": "Excerpted for cast/impact/chain timing, gain-normalized, lightly faded and converted to mono 44.1 kHz PCM WAV. No other source audio is mixed in."
+    }
+  ]
+}
