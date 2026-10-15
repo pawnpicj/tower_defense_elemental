@@ -1,23 +1,18 @@
 {
   "project": "Tower_Defense / Elemental Frontier",
-  "snapshotDate": "2026-10-14",
+  "snapshotDate": "2026-10-15",
   "timezone": "Asia/Bangkok",
   "repository": "https://github.com/pawnpicj/tower_defense_elemental",
   "runtime": {
     "framework": "Three.js",
     "devServer": "Vite",
-    "currentStyle": "3D Pixel Art / Orthographic isometric",
-    "pixelSizes": [
-      2,
-      3,
-      4
-    ],
+    "currentStyle": "Toon / Cel-shaded / Orthographic isometric",
     "cameraFocusZoom": 2.5
   },
   "designStatus": {
     "conceptsGeneratedWith": "Built-in ImageGen",
-    "selectedConcept": null,
-    "note": "The three concept images are AI-generated art direction previews, not real-time game screenshots. The playable implementation currently remains the pixel-art version. The user reported that this pixel style obscures detail; no replacement concept has been selected or implemented."
+    "selectedConcept": 1,
+    "note": "Toon / Cel-shaded selected by the user on 15 October 2026 and implemented as the active rendering direction. Generated concepts are art references, not real-time screenshots or exact asset replicas. The 14 October PDF is a historical snapshot."
   },
   "towers": [
     {
@@ -81,12 +76,7 @@
     "initialTowers": 5,
     "baseHP": 20,
     "firstWaveEnemies": 12,
-    "additionalEnemiesPerWave": 3,
-    "enemyHPGrowthPerWave": 0.2,
-    "normalEnemyHP": 600,
-    "tankHP": 1000,
     "normalEnemySpeed": 1.65,
-    "tankSpeed": 1.35,
     "speedMultipliers": [
       1,
       2,
@@ -94,9 +84,9 @@
     ]
   },
   "effects": {
-    "earth": "1.55 m area damage and 0.55 s stun",
-    "water": "50% slow for 2.2 s",
-    "wind": "0.38 m knockback",
+    "earth": "1.55 m area damage, 0.55 s stun, 4 s armor break",
+    "water": "50% slow for 2.2 seconds, wet for 5 seconds",
+    "wind": "0.38 m knockback; spreads burning targets within 2 m",
     "fire": "Area damage and 3 s burn; 8 damage per 0.5 s tick",
     "lightning": "Up to 3 targets; 22% damage falloff per jump"
   },
@@ -327,6 +317,249 @@
       "Cast and impact audio including three lightning chain sounds",
       "Day/night and mobile layout"
     ],
-    "pdf": "Seven pages rendered to PNG with Poppler and visually reviewed; no clipping or overlapping content observed."
+    "pdf": "Seven pages rendered to PNG with Poppler and visually reviewed; no clipping or overlapping content observed.",
+    "economy": "Nine unit tests passed; browser checked purchases, upgrades, sales, replacements, training exclusion, full wave rewards and mobile layout.",
+    "unitTests": "32 tests passed",
+    "monsterBrowserChecks": "Live damage for three combos, training isolation and model picker, natural wave-10 roster spawn and boss HUD, injected lethal damage to validate boss/wave gold, wave-11 family switch, boss escape damage, mobile overflow, and natural wave 1 completed with 12 kills and 20 base HP using a level-3 earth tower.",
+    "databaseBrowserChecks": "15 tower forms and 56 monster forms; orbit/zoom/reset, geometry framing, Thai search and empty state, URL restoration, wave input limits, 320/390/768px layout, battlefield navigation and mobile header.",
+    "campaignSimulation": {
+      "method": "Actual browser simulation steps; UI purchase/upgrade transactions between waves; no injected rewards or forced damage",
+      "completed": 50,
+      "baseHP": 6,
+      "kills": 1147,
+      "bossKills": 6,
+      "towerLevels": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "earnedGold": 20366,
+      "remainingGold": 17706
+    }
+  },
+  "economy": {
+    "startingGold": 1000,
+    "initialTowerCost": 620,
+    "availableAfterInitialTowers": 380,
+    "sellRatio": 0.7,
+    "normalKillReward": 10,
+    "tankKillReward": 18,
+    "waveReward": "35 + 3 * waveNumber",
+    "trainingReward": 0,
+    "levels": 3,
+    "damageMultipliers": [
+      1,
+      1.6,
+      2.4
+    ],
+    "rangeBonuses": [
+      0,
+      0.4,
+      0.8
+    ],
+    "attackIntervalMultipliers": [
+      1,
+      0.9,
+      0.8
+    ],
+    "costs": {
+      "earth": [
+        120,
+        120,
+        220
+      ],
+      "water": [
+        100,
+        100,
+        180
+      ],
+      "wind": [
+        100,
+        110,
+        190
+      ],
+      "fire": [
+        140,
+        140,
+        240
+      ],
+      "lightning": [
+        160,
+        160,
+        280
+      ]
+    },
+    "costColumns": [
+      "build",
+      "upgradeToLevel2",
+      "upgradeToLevel3"
+    ]
+  },
+  "monsters": {
+    "stageWaves": 10,
+    "families": [
+      [
+        "slime"
+      ],
+      [
+        "rat",
+        "spider"
+      ],
+      [
+        "goblin"
+      ],
+      [
+        "skeleton",
+        "zombie"
+      ],
+      [
+        "orc"
+      ]
+    ],
+    "afterWave50": "Playable campaign finishes with victory; higher-wave values are hypothetical Database calculations.",
+    "archetypes": [
+      "normal",
+      "fast",
+      "armored",
+      "resistant"
+    ],
+    "waveCount": "min(28, 12 + floor((wave-1)/2)) + (wave%10===0 ? 1 : 0)",
+    "baseHP": 320,
+    "hpGrowthPerWave": 1.0275,
+    "familyHPMultipliers": [
+      1,
+      1.08,
+      1.16,
+      1.25,
+      1.4
+    ],
+    "bossHPFactor": 10,
+    "bossBaseDamage": 5,
+    "bossRewards": [
+      150,
+      225,
+      300,
+      375,
+      450
+    ],
+    "visualStyle": "Smooth cartoon models with Phong surfaces, soft specular highlights, thin dark outlines, rounded equipment and species-specific joint animation",
+    "geometry": "Shared immutable sphere/capsule/rounded-box/curved-tube geometry cached per factory",
+    "animations": "Shared animateMonster for Database and battlefield; slime squash/bounce, rat paws/ears/tail, spider eight-leg gait, humanoid hip/shoulder gait, zombie forward arms, magic rune orbit",
+    "nonBossSlimeScaleMultiplier": 0.8,
+    "shieldSpecies": [
+      "goblin",
+      "skeleton",
+      "zombie",
+      "orc"
+    ],
+    "shieldRule": "Armored humanoids only; Slime, Rat and Spider use helmets without shields. Boss Slime scale is unchanged.",
+    "humanoidArtDirection": "User-provided goblin reference: oversized heads, stocky compact bodies, large hands/feet, leather adventurer outfits, expressive faces; species-specific skull/undead/brute details.",
+    "zombieArtDirection": "Independent undead human: gaunt oval face, uneven sunken/cloudy eyes, sparse hair, stitches, crooked mouth/missing teeth, ragged blue-grey shirt, one boot/one bare foot, forward arms and dragging gait; no goblin fangs/brows or adventurer satchel/strap.",
+    "skeletonArtDirection": "Independent open bone anatomy: recessed skull sockets/nose, separate jaw/teeth, curved ribs/spine/pelvis, paired limb bones, bony hands/feet, shaped steel sword; no adventurer outfit.",
+    "orcArtDirection": "Independent brute warrior: broad shoulders/chest, square jaw, narrow amber eyes, curved tusks, compact ears, shoulder spikes, iron bracers/knee guards, heavy boots and double-headed battle axe; slower heavy gait, no adventurer satchel.",
+    "globalScaleMultiplier": 0.8,
+    "bossCount": 6,
+    "wave40": "Skeleton and Zombie together; each 60% full boss HP and 50% reward"
+  },
+  "combos": {
+    "wetLightning": {
+      "wetSeconds": 5,
+      "damageMultiplier": 1.6
+    },
+    "windFire": {
+      "spreadRadiusMeters": 2,
+      "duration": "remaining source burn duration, max 3 seconds",
+      "damage": "preserves source burn damage"
+    },
+    "earth": {
+      "armorBreakSeconds": 4,
+      "physicalResistanceReduction": 0.35,
+      "allElementDamageMultiplier": 1.2
+    }
+  },
+  "database": {
+    "path": "/database.html",
+    "towers": 5,
+    "towerLevels": 3,
+    "monsterSpecies": 7,
+    "monsterArchetypes": 4,
+    "monsterBossVariants": true,
+    "viewControls": [
+      "drag orbit",
+      "scroll/pinch zoom",
+      "auto rotate",
+      "animation toggle",
+      "reset camera"
+    ],
+    "features": [
+      "Thai/English search",
+      "shared game models and stats",
+      "tower cost and sale data",
+      "monster wave stat calculator",
+      "URL selection persistence"
+    ],
+    "statWaveRange": [
+      1,
+      999
+    ]
+  },
+  "campaign": {
+    "waves": 50,
+    "autoProgression": true,
+    "preparationSeconds": 8,
+    "pauseStopsCountdown": true,
+    "speedAffectsCountdown": false,
+    "win": "clear wave 50 with base HP > 0",
+    "lose": "base HP reaches zero",
+    "repeat": "manual reset only",
+    "spawnInterval": "max(0.85, 1.15 - (wave-1)*0.006)",
+    "summary": [
+      "completed waves",
+      "kills",
+      "boss kills",
+      "base HP",
+      "earned gold",
+      "remaining gold",
+      "active time",
+      "highest damage element"
+    ],
+    "training": "idle setup only; cleared before starting; no base damage or rewards"
+  },
+  "saveGame": {
+    "version": 1,
+    "storage": "browser localStorage",
+    "key": "elemental-frontier.checkpoint.v1",
+    "checkpoints": "start, completed waves and setup/preparation tower transactions",
+    "midWave": false,
+    "resume": "restore checkpoint and pause preparation",
+    "failure": "report errors and leave live state intact",
+    "fields": [
+      "gold/accounting",
+      "towers/levels/investment",
+      "baseHP",
+      "completed wave",
+      "speed",
+      "statistics",
+      "elapsed",
+      "last enemy id"
+    ]
+  },
+  "bossSkills": {
+    "slime": "death split into 3 small Slimes once",
+    "spider": "summon 3 spiders, max 6",
+    "goblin": "summon 3 Goblins, max 6",
+    "skeleton": "summon 3 Skeletons, max 6",
+    "zombie": "summon 3 Zombies, max 6",
+    "orc": "25% haste for nearby allies, 3 seconds, 6 m radius, every 12 seconds",
+    "minions": {
+      "hpFactor": 0.35,
+      "scaleFactor": 0.6,
+      "goldReward": 0
+    }
   }
 }

@@ -6,4 +6,4 @@
 - `concepts/`: three full-resolution ImageGen concepts and prompt summaries.
 - `screenshots/`: current real-time implementation screenshot.
 
-The game still runs the pixel-art style. The concepts have not been selected or implemented.
+Toon / Cel-shaded was selected and implemented on 15 October 2026. The PDF remains the historical 14 October snapshot.

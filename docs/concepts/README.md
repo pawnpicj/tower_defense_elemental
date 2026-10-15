@@ -1,6 +1,6 @@
 # Art direction previews
 
-Generated with built-in ImageGen, using the existing pixel battlefield screenshot as a composition reference. These are concept illustrations, not screenshots of the playable game. No concept has been selected or implemented yet.
+Generated with built-in ImageGen, using the existing pixel battlefield screenshot as a composition reference. These are concept illustrations, not screenshots of the playable game. Toon / Cel-shaded was selected on 15 October 2026 and now guides the active rendering style.
 
 ## 1. Toon / Cel-shaded
 
